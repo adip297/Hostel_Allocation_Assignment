@@ -52,6 +52,7 @@ const Hostel = () => {
           {girlsHostelWings.map((wing) => {
             return (
               <span
+                key={wing}
                 onClick={wingSelectHandler}
                 style={{
                   height: "250px",
@@ -78,6 +79,7 @@ const Hostel = () => {
           {boysHostelWings.map((wing) => {
             return (
               <span
+                key={wing}
                 onClick={wingSelectHandler}
                 style={{
                   height: "250px",
