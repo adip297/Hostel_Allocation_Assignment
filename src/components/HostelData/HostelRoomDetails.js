@@ -17,17 +17,19 @@ const HostelRoomDetails = (props) => {
         <p>Your room details are as follows:</p>
         <div className="roomDetails">
           <div className="hostelWing">
-            <label style={{ fontSize: "xx-large" }} htmlFor="hostel">
-              Hostel No.{"  "}
-            </label>
+            <label style={{ fontSize: "xx-large" }}>Hostel No.{"  "}</label>
             <text style={{ color: "red", fontSize: "xx-large" }}>
               {props.wing}
             </text>
           </div>
+          <div className="hostelFloor">
+            <label style={{ fontSize: "xx-large" }}>Floor.{"  "}</label>
+            <text style={{ color: "red", fontSize: "xx-large" }}>
+              {props.floor}
+            </text>
+          </div>
           <div className="hostelRoom">
-            <label style={{ fontSize: "xx-large" }} htmlFor="room">
-              Room No.{"  "}
-            </label>
+            <label style={{ fontSize: "xx-large" }}>Room No.{"  "}</label>
             <text style={{ color: "red", fontSize: "xx-large" }}>
               {props.room}
             </text>

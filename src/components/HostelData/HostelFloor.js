@@ -7,6 +7,7 @@ const HostelFloor = (props) => {
   const [selectedRoom, setSelectedRoom] = useState("");
   const [displayBookingBtn, setDisplayBookingBtn] = useState(false);
   const [roomBooked, setRoomBooked] = useState(false);
+  const [floor, setFloor] = useState(1);
   const selectRoomHandler = (e) => {
     // console.log(e.target.innerText);
     setSelectedRoom(e.target.innerText);
@@ -20,17 +21,27 @@ const HostelFloor = (props) => {
   return (
     <>
       {roomBooked ? (
-        <HostelRoomDetails wing={props.wing} room={selectedRoom} />
+        <HostelRoomDetails
+          floor={floor}
+          wing={props.wing}
+          room={selectedRoom}
+        />
       ) : (
         <>
           <h3 className="floorSelection">Choose a floor</h3>
           <div className="chooseFloor">
-            <select name="floors" id="floors">
-              <option value="floor1">floor1</option>
-              <option value="floor2">floor2</option>
-              <option value="floor3">floor3</option>
-              <option value="floor4">floor4</option>
-              <option value="floor5">floor5</option>
+            <select
+              onChange={(e) => {
+                setFloor(e.target.value);
+              }}
+              name="floors"
+              id="floors"
+            >
+              <option value="1">floor 1</option>
+              <option value="2">floor 2</option>
+              <option value="3">floor 3</option>
+              <option value="4">floor 4</option>
+              <option value="5">floor 5</option>
             </select>
           </div>
           <br></br>
